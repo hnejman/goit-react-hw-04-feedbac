@@ -24,7 +24,7 @@ export class Statistics extends Component {
             Bad:<span>{this.props.bad}</span>
           </p>
           <p>
-            Positive feedback: <span>{this.props.feedback}%</span>
+            Positive feedback: <span>{this.props.total}%</span>
           </p>
         </div>
     );
