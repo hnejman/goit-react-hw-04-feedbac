@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { PropTypes } from 'prop-types';
 
 export class FeedbackOptions extends Component {
   
@@ -32,4 +33,15 @@ export class FeedbackOptions extends Component {
       </div>
     );
   }
+}
+
+FeedbackOptions.propTypes = {
+  handleGood: PropTypes.func.isRequired,
+  handleNeutral: PropTypes.func.isRequired,
+  handleBad: PropTypes.func.isRequired,
+  handleTotal: PropTypes.func.isRequired,
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired
 }

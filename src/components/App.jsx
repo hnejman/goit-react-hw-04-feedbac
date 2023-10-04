@@ -10,6 +10,8 @@ export const App = () => {
   const [bad, handleBad] = useState(0);
   const [total, handleTotal] = useState(0);
 
+
+  
     return (
       <div>
         <Section title="Please leave feedback"/>
@@ -23,7 +25,7 @@ export const App = () => {
             bad={bad}
             total={total}
           />
-        <Section title="Statistics:"/>
+          <h2>Statistics:</h2>
           <Statistics 
           good={good} 
           neutral={neutral}
