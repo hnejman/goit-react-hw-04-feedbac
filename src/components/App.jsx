@@ -1,6 +1,5 @@
 import { Statistics } from 'components/Statistics';
 import { FeedbackOptions } from 'components/FeedbackOptions';
-import { Section } from './Section';
 import { useState } from 'react';
 
 export const App = () => {
