@@ -13,7 +13,7 @@ export const App = () => {
   
     return (
       <div>
-        <Section title="Please leave feedback"/>
+         <h2>Please leave feedback</h2>
           <FeedbackOptions 
             handleGood={handleGood}
             handleNeutral={handleNeutral}
