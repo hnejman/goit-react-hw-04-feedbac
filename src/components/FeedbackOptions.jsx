@@ -1,38 +1,35 @@
-import { Component } from 'react';
 import { PropTypes } from 'prop-types';
 
-export class FeedbackOptions extends Component {
+export const FeedbackOptions = ({good, neutral, bad, total , handleBad, handleGood, handleNeutral, handleTotal}) => {
   
-  render() {
     return (
       <div>
         <button
           onClick={() => {
-            this.props.handleGood(this.props.good + 1);
-            this.props.handleTotal(((this.props.good + 1)/(this.props.good + this.props.bad + this.props.neutral + 1))*100);
+             handleGood( good + 1);
+             handleTotal((( good + 1)/( good +  bad +  neutral + 1))*100);
           }}
         >
           Good
         </button>
         <button
           onClick={() => {
-            this.props.handleNeutral(this.props.neutral + 1);
-            this.props.handleTotal((this.props.good/(this.props.good + this.props.bad + this.props.neutral + 1))*100);
+             handleNeutral( neutral + 1);
+             handleTotal(( good/( good +  bad +  neutral + 1))*100);
           }}
         >
           Neutral
         </button>
         <button
           onClick={() => {
-            this.props.handleBad(this.props.bad + 1);
-            this.props.handleTotal((this.props.good/(this.props.good + this.props.bad + this.props.neutral + 1))*100);
+             handleBad( bad + 1);
+             handleTotal(( good/( good +  bad +  neutral + 1))*100);
           }}
         >
           Bad
         </button>
       </div>
     );
-  }
 }
 
 FeedbackOptions.propTypes = {
