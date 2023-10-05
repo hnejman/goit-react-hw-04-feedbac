@@ -1,6 +1,9 @@
 import { PropTypes } from 'prop-types';
 
-export const Statistics = ({ good, neutral, bad, total }) => {
+export const Statistics = ({ good, neutral, bad}) => {
+
+const total = good / (good + neutral + bad) * 100;
+
   if (good === 0 && neutral === 0 && bad === 0) {
     return (
       <div>
@@ -30,6 +33,5 @@ export const Statistics = ({ good, neutral, bad, total }) => {
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
   neutral: PropTypes.number.isRequired,
-  bad: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired
 };
